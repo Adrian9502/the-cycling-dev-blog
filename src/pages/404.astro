@@ -1,0 +1,32 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`404 — ${SITE_TITLE}`} description="Page not found." />
+	</head>
+	<body>
+		<Header />
+		<main class="max-w-2xl mx-auto px-6 py-24 md:py-32 text-center">
+			<p class="font-mono text-sm text-slate-500 mb-3">404</p>
+			<h1 class="text-3xl md:text-4xl font-medium tracking-tight text-[#334155]">
+				Wrong turn.
+			</h1>
+			<p class="mt-4 text-slate-600 leading-relaxed max-w-sm mx-auto">
+				This page doesn't exist — probably a broken link, or a route that got renamed.
+			</p>
+			
+				href="/"
+				class="inline-flex items-center gap-2 mt-8 text-sm font-medium text-[#334155] border-b border-transparent hover:border-[#ADFF2F] transition-colors duration-200"
+			>
+				← Back home
+			</a>
+		</main>
+		<Footer />
+	</body>
+</html>
